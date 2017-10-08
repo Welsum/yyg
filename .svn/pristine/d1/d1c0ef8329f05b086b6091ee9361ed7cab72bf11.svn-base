@@ -1,0 +1,178 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>会员登录云易购</title>
+
+		<!-- Bootstrap -->
+		<link href="<%=request.getContextPath() %>/front/css/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" href="<%=request.getContextPath() %>/front/css/Login.css" />
+		<script type="text/javascript" src="<%=request.getContextPath() %>/front/js/jquery.min.js"></script>
+		<script type="text/javascript" src="<%=request.getContextPath() %>/front/js/login.js"></script>
+		<script type="text/javascript" src="<%=request.getContextPath() %>/front/js/newjs.js" ></script>
+		<!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+	<!--页头部分-->
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 logo-point">
+						<a href="#"><img src="<%=request.getContextPath() %>/front/img/logo.png" ></a>
+				</div>
+
+				<div class="col-lg-3 col-lg-offset-7 ">
+					<div style="margin-top: 120px;">
+						<a class="astyle" href="#">返回首页</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--登录框部分-->
+		<div class="web-body">
+			<div class="web-panel">
+				<div class="header">
+					<div class="switch" id="switch">
+						<a class="switch_btn_focus" id="switch_qlogin" href="javascript:void(0);" tabindex="7">快速登录</a>
+						<a class="switch_btn" id="switch_login" href="javascript:void(0);" tabindex="8">快速注册</a>
+						<div class="switch_bottom" id="switch_bottom" style="position: absolute; width: 64px; left: 0px;"></div>
+					</div>
+				</div>
+				<div class="web_qr_login" id="web_qr_login" style="display: block; height: 235px;">
+
+					<!--登录-->
+					<div class="web_login" id="web_login">
+
+						<div class="login-box">
+
+							<div class="login_form">
+								<form class="panel-bodystyle" action="<%=request.getContextPath() %>/logindo" method="post">
+									<div class=panel-error>
+										<div></div>
+									</div>
+									<div class="wizard-field active" style="margin-top: 40px;">
+										<div class="input-group">
+											<span class="input-group-addon">
+												<span class="glyphicon glyphicon-user"></span>
+											</span>
+											<input name="user.ulogincode" type="text" class="form-control" placeholder="你的手机/邮箱" aria-describedby="basic-addon1" style="font-family: '微软雅黑';font-size: small;" >
+										</div>
+									</div>
+									<div class="wizard-field active" style="margin-top: 30px;">
+										<div class="input-group">
+											<span class="input-group-addon">
+												<span class="glyphicon glyphicon-lock"></span>
+											</span>
+											<input name="user.upassword"  type="password" class="form-control" placeholder="密码" aria-describedby="basic-addon1" style="font-family: '微软雅黑';font-size: small;">
+										</div>
+									</div>
+									<div class="panel-footer text-xs-center" style="margin-top: 50px;">
+										<div class="wizard-buttons">
+											<button class="btn btn-lg btn-primary btn-block btn-blue" type="submit">
+							登录
+						</button>
+											<small class="form-text text-muted">
+							忘记密码？
+							<a class="text-danger" href="#">找回密码</a>
+						</small>
+										</div>
+									</div>
+
+								</form>
+							</div>
+
+						</div>
+
+					</div>
+					<!--登录end-->
+				</div>
+
+				<div class="qlogin" id="qlogin" style="display: none; ">
+
+					<div class="web_login">
+						<div class="register_form">
+							<form class="panel-bodystyle">
+								<div class=panel-error>
+									<div></div>
+								</div>
+								<div class="wizard-field active" style="margin-top: 40px;">
+									<div class="input-group">
+										<span class="input-group-addon" id="sizing-addon1">
+  								<span class="glyphicon glyphicon-user"></span>
+  							</span>
+  							<input type="text"  id="user" class="form-control" placeholder="手机/邮箱地址"   aria-describedby="sizing-addon1" onfocus="dianji();asd();" onblur="xianshi();qweasd();email();"  style="color: #000;font-family: '微软雅黑';font-size: small;">
+									</div>
+									<div class="newalert newalert-danger" id="user-1" role="alert" style="visibility: hidden;">&nbsp;&nbsp;长度要在8个数以上或正确邮箱！</div>
+								</div>
+								<div class="wizard-field active">
+									<div class="input-group">
+										<span class="input-group-addon" id="sizing-addon1">
+  								<span class="glyphicon glyphicon-lock"></span>
+										</span>
+										<input type="password" id="password" class="form-control" placeholder="设置密码" aria-describedby="sizing-addon1" onfocus="dianji1();asd1()" onblur="xianshi1();qweasd1()" style="color: #000;font-family: '微软雅黑';font-size: small;">
+									</div>
+									<div class="newalert newalert-danger" id="password-1" role="alert" style="visibility: hidden;">&nbsp;&nbsp;建议使用6~12以上个字母、数字的组合密码!</div>
+								</div>
+								<div class="wizard-field active">
+									<div class="input-group ">
+										<span class="input-group-addon" id="sizing-addon1">
+  								<span class="glyphicon glyphicon-lock"></span>
+										</span>
+										<input type="password" id="password2" class="form-control" placeholder="确认密码" aria-describedby="sizing-addon1" onfocus="dianji2();" onblur="xianshi2();qweasd2()" style="color: #000;font-family: '微软雅黑';font-size: small;">
+									</div>
+									<div class="newalert newalert-danger" role="alert" id="password2-1" style="visibility: hidden;">&nbsp;&nbsp;两次密码不相同！</div>
+
+								</div>
+
+								<div class="wizard-field active">
+						<select class=" form-control  ">
+								<option value="Q">请选择问题便于找回密码</option>
+    							<option value="Q1">你的生日是？</option>
+								<option value="Q2">你的大学老师贵姓？</option>
+								<option value="Q3">你的高中在哪里？</option>
+    					</select>
+    					<div class="input-group " style="margin-top: 30px;">
+  								<span class="input-group-addon" id="sizing-addon3">@</span>
+  								<input type="text" class="form-control" placeholder="请输入你的答案" aria-describedby="sizing-addon3">
+						</div>
+								</div>
+
+								<div class="panel-footer text-xs-center" style="margin-top: 50px;">
+									<div class="wizard-buttons">
+										<button class="btn btn-lg btn-primary btn-block btn-blue" type="button">
+							注册
+						</button>
+
+									</div>
+								</div>
+
+							</form>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		<!--页脚部分-->
+		<div class="web-copyright">
+			Copyright © 2016 - 2017, 萎熊商城 版权所有
+		</div>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.js"></script>
+
+	</body>
+
+</html>

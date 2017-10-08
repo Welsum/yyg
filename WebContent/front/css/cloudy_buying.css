@@ -1,0 +1,471 @@
+ul{
+	margin: 0;
+	padding: 0;
+}
+.container{
+	padding: 0;
+}
+.thumbnail{
+	border: none;
+}
+/*顶部*/
+/*.container-fluid{
+	border-bottom: 1px solid gainsboro;
+}
+.container-fluid .logo,.container-fluid .login{
+	margin-top: 1%;
+}
+.container-fluid .logo_font{
+	height: 1em;
+	color: #000;
+}
+.container-fluid .list-inline{
+	display: inline-block;
+	float: right;
+}
+.container-fluid .login_body{
+	height: 1em;
+	color: #000;
+	text-decoration: none;
+}*/
+/*头部*/
+/*.header{
+	margin: 1% 0;
+}
+.logo-point{
+	padding: 0;
+}
+.number{
+	font-size: 15px;
+	margin-top: 4.5em;
+}
+.number ul.list-inline{
+	width: 120%;
+	text-align: center;
+}
+.number li.num{
+	font-size: 20px;
+}
+.search-body{
+	padding: 0;
+	margin-top: 5%;
+	float: right;
+}
+.search-body input{
+	display: block;
+	float: left;
+	width: 70%;
+	margin-left: 10%;
+}
+.search-body button{
+	display: inline-block;
+	float: right;
+}*/
+/*导航栏*/
+/* .navbar-default{
+	background-color: rgba(222,184,135,0.5);
+}
+
+.dropdown-menu{
+	margin-top: 1.7%;
+	min-width: 21%;
+	border: 3px solid gainsboro;
+	border-radius: none;
+	box-shadow: none;
+}
+.dropdown-menu a{
+	font-size: 16px;
+}
+.navbar-brand{
+	text-align: center;
+	letter-spacing: .4em;
+	padding-left: 4em;
+	padding-right: 4em;
+}
+.navbar-nav a{
+	font-size: 18px;
+	margin-left: 1em;
+} */
+/*轮播图*/
+#carousel-generic{
+	padding: 0;
+}
+/*最新揭晓*/
+.new{
+	margin-top: 6%;
+	position: relative;
+}
+.new .new-head{
+	padding: 0;
+}
+.new-left{
+	padding: 0;
+	margin-left: 1.25%;
+	float: left;
+}
+.new-right{
+	width: 85%;
+	display: inline-block;
+	float: left;
+	margin-left: 15%;
+	position: relative;
+}
+.new-font{
+	width: 12.5%;
+	height: 100%;
+	float: left;
+	display: block;
+	background-color: rgba(78,255,0,0.7);
+	position: absolute;
+}
+.new-font-style{
+	font-size: 40px;
+	line-height: 1.5em;
+	color: #fff;
+	padding: 20% 40% 0 38%;
+}
+.new .shops{
+	width: 100%;
+	border: 1px solid gainsboro;
+	overflow: hidden;
+}
+.new-bg-left{
+	height: 80%;
+	width: 5%;
+	display: block;
+	float: left;
+	margin-left: 1%;
+	margin-top: 3%;
+	background-color: gainsboro;
+	position: absolute;
+}
+.new-bg-right{
+	height: 80%;
+	width: 5%;
+	display: inline-block;
+	float: left;
+	margin-left: 1.25%;
+	margin-top: 3%;
+	background-color: gainsboro;
+	position: absolute;
+}
+.new-bg-left span,.new-bg-right span{
+	font-size: 40px;
+	margin-top: 2em;
+	margin-left: .1em;
+	color: #fff;
+}
+.new .shops img{
+	height: 100%; 
+	width: 100%; 
+	display: block;
+	padding-bottom: 0;
+}
+.new .new-body-body{
+	margin-left: 7.5%;
+}
+.new .caption a{
+	color: #000000;
+	margin-left: 5%;
+	padding: 0;
+}
+.new .caption .new-body-val{
+	margin-left: 5%;
+	padding-bottom: 0;
+}
+.new .caption button{
+	width: 90%;
+	margin-left: 5%;
+	padding-bottom: 0;
+}
+/*热门推荐*/
+.hot{
+	margin-top: 4%;
+	position: relative;
+}
+.hot .hot-head{
+	padding: 0;
+}
+.hot-left{
+	padding: 0;
+	margin-left: 1.25%;
+	float: left;
+}
+.hot-center{
+	width: 60%;
+	display: inline-block;
+	float: left;
+	margin-left: 15%;
+}
+.hot-right{
+	padding: 0;
+	float: left;
+	margin-right: 15%;
+}
+.hot-font{
+	width: 12.5%;
+	height: 100%;
+	display: block;
+	background-color: rgba(255,216,0,0.7);
+	position: absolute;
+}
+.hot-font-style{
+	font-size: 40px;
+	line-height: 2em;
+	color: #fff;
+	padding: 70% 40% 0 38%;
+}
+.hot .shops{
+	width: 100%;
+	border: 1px solid gainsboro;
+	overflow: hidden;
+}
+.hot .shops img{
+	height: 100%; 
+	width: 100%; 
+	display: block;
+	padding-bottom: 0;
+}
+.hot .down{
+	margin-top: 1%;
+}
+.hot .hot-body{
+	padding-left:.5% ;
+	width: 24%;
+	display: inline-block;
+	float: left;
+}
+.hot .caption .btn-danger{
+	width: 60%;
+	margin-left: 5%;
+}
+.hot .caption .btn-warning{
+	width: 25%;
+	margin-left: 5%;
+}
+.hot .caption a{
+	color: #000000;
+	margin-left: 5%;
+	padding: 0;
+}
+.hot .caption .hot-body-val{
+	margin-left: 5%;
+	padding-bottom: 0;
+}
+.msg-box{
+	width: 24%;
+	height: 100%;
+	display: inline-block;
+	position: absolute;
+	border: 1px solid gainsboro;
+}
+.hot-right-buying{
+	height: 8%;
+	border-bottom: 1px solid gainsboro;
+}
+.hot-right-msg{
+	height: 12%;
+	border-bottom: 1px solid gainsboro;
+}
+.hot-right-show{
+	height: 8%;
+}
+.msg-box span.customers-buying{
+	display: block;
+	font-size: 20px;
+	line-height: 1em;
+	letter-spacing: .5em;
+	padding-top: .2em;
+	text-align: center;
+}
+.custom-img{
+	width: 22%;
+	height: 100%;
+	display: inline-block;
+	float: left;
+}
+.custom-img .img-circle{
+	width: 80%;
+	height: 85%;
+	border-radius: 50%;
+	background-color: gray;
+	margin-left: 10%;
+	margin-top: 2.5%;
+}
+.custom-msg{
+	width: 78%;
+	height: 100%;
+	display: inline-block;
+	float: left;
+}
+.custom-msg .custom-msg-up{
+	height: 40%;
+	width: 100%;
+	font-size: 18px;
+}
+.custom-msg .custom-msg-up a{
+	text-decoration: none;
+}
+.custom-msg .custom-msg-down{
+	height: 60%;
+	width: 100%;
+	font-size: 14px;
+}
+.msg-box span.customers-show{
+	display: block;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1em;
+	margin-top: .5em;
+	text-align: center;
+}
+/*类别*/
+.more{
+	margin-top: 3%;
+	margin-left: 95%;
+}
+.cls-one{
+	margin-top: 1%;
+	position: relative;
+}
+.cls-one-left{
+	padding: 0;
+	margin-left: 1.25%;
+	float: left; 
+}
+.cls-one-right{
+	width: 85%;
+	display: inline-block;
+	float: right;
+	margin-right: 1.25%;
+	position: relative;
+}
+.cls-one-font1{
+	height: 100%;
+	width: 12.5%;
+	float: left;
+	display: block;
+	background-color: rgba(0,180,255,0.7);
+	position: absolute;
+}
+.cls-one-font2{
+	height: 100%;
+	width: 12.5%;
+	float: left;
+	display: block;
+	background-color: rgba(255,0,228,0.7);
+	position: absolute;
+}
+.cls-one-font3{
+	height: 100%;
+	width: 12.5%;
+	float: left;
+	display: block;
+	background-color: rgba(255,0,0,0.7);
+	position: absolute;
+}
+.cls-one-font4{
+	height: 100%;
+	width: 12.5%;
+	float: left;
+	display: block;
+	background-color: rgba(255,114,0,0.7);
+	position: absolute;
+}
+.cls-one-font5{
+	height: 100%;
+	width: 12.5%;
+	float: left;
+	display: block;
+	background-color: rgba(74,255,227,0.7);
+	position: absolute;
+}
+.cls-one-font-style{
+	font-size: 40px;
+	line-height: 1.5em;
+	color: #fff;
+	padding: 25% 40% 0 38%;
+}
+.cls-one .cls-one-body{
+	padding: 0;
+	margin: 0;
+}
+.cls-one .cls-one-body-body{
+	margin: 0;
+	width: 19.5%;
+	display: inline-block;
+	float: left;
+	margin: 0 0.25%;
+}
+.cls-one .shops{
+	width: 100%;
+	border: 1px solid gainsboro;
+	overflow: hidden;
+}
+.cls-one .shops img{
+	height: 100%; 
+	width: 100%; 
+	display: block;
+	padding-bottom: 0;
+}
+.cls-one .caption a{
+	color: #000000;
+	margin-left: 5%;
+	padding: 0;
+}
+.cls-one .caption .cls-one-body-val{
+	margin-left: 5%;
+	padding-bottom: 0;
+}
+.cls-one .caption .btn-danger{
+	width: 60%;
+	margin-left: 5%;
+	padding-bottom: 0;
+}
+.cls-one .caption .btn-warning{
+	width: 25%;
+	margin-left: 5%;
+	padding-bottom: 0;
+}
+/*页脚*/
+/*.footer{
+	margin-top: 4%;
+	margin-bottom: 4%;
+	border-top: 1px solid gainsboro;
+}
+.footer .footer-body{
+	text-align: center;
+	margin-top: 1.5%;
+}
+.footer li.header{
+	font-size: 20px;
+	margin-top: 1em;
+	font-weight: bolder;
+	color: #000;
+}
+.footer li.body{
+	margin-top: .8em;
+}
+.footer li a{
+	color: gray;
+}
+.footer .foot-up{
+	width: 20%;
+	float: left;
+	text-align: center;
+}
+.footer .foot-center{
+	text-align: center;
+	margin-top: 3%;
+}
+.footer .foot-down{
+	text-align: center;
+	color: gray;
+	margin-top: 1%;
+}*/
+/*媒体查询*/
+@media only screen and (min-width: 1200px) {
+	.container-fluid{height: 45px;}
+	.logo_font,.login_body{font-size: 16px;}
+	.carousel-inner{height: 400px;}
+}

@@ -1,0 +1,158 @@
+package yyg.zdxh.action.front;
+
+import java.sql.Timestamp;
+
+import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.ActionSupport;
+
+import net.sf.json.JSONArray;
+import yyg.zdxh.biz.BackBo;
+import yyg.zdxh.entitys.Admin;
+import yyg.zdxh.entitys.User;
+
+public class UserAction extends ActionSupport{
+	private User user = new User();
+	private String problem = null;
+	private String answer = null;
+	private String newPwd = null;
+	private String rePwd = null;
+	private JSONArray result;
+	
+	private BackBo biz = null;
+
+	/**获取登录页面*/
+	public String loginPage(){
+		return this.SUCCESS;
+	}
+	
+	/**处理登录数据*/
+	public String loginDo(){
+		User user1 = (User) biz.getOneByOne(user.getUlogincode(),"uloginCode");
+		if(user1==null){
+			this.addActionError("账号错误");
+			return this.INPUT;
+		}else if(user.getUpassword().equals(user.getUpassword())){
+			ActionContext.getContext().getSession().put("user", user1);//登录成功，记在session中后续使用
+			user = user1;
+			return this.SUCCESS;
+		}else{
+			this.addActionError("密码错误");
+			return this.INPUT;
+		}
+	}
+	
+
+	/**处理注册数据*/
+	public String registerDo(){
+		if(user!=null){
+			user.setUremark(problem+":"+answer);
+			user.setUadddate(new Timestamp(System.currentTimeMillis()));
+			biz.save(user);
+		}
+		return this.SUCCESS;
+	}
+	
+	
+	/**获取忘记密码页面*/
+	public String forgetPage(){
+		return this.SUCCESS;
+	}
+	
+	/**处理忘记密码数据*/
+	public String forgetDo(){
+		if(newPwd==rePwd){
+			User user1=(User) biz.getOneByOne(user.getUlogincode(),"uloginCode");
+			if(user1==null){
+				return this.INPUT;
+			}else if(user1.getUremark()==problem+":"+answer){
+				user1.setUpassword(newPwd);
+				user=user1;
+				biz.update(user);
+				return this.SUCCESS;
+			}
+			return this.INPUT;
+		}else
+			return this.INPUT;
+	}
+	
+	/**是否登录*/
+	public String getSession(){
+		user=(User) ActionContext.getContext().getSession().get("user");
+		if(user != null){
+			result = JSONArray.fromObject(this.user);
+			return this.SUCCESS;
+		}else{
+			return this.ERROR;
+		}
+	}
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public String getProblem() {
+		return problem;
+	}
+
+	public void setProblem(String problem) {
+		this.problem = problem;
+	}
+
+	public String getAnswer() {
+		return answer;
+	}
+
+	public void setAnswer(String answer) {
+		this.answer = answer;
+	}
+	
+	public String getNewPwd() {
+		return newPwd;
+	}
+
+	public void setNewPwd(String newPwd) {
+		this.newPwd = newPwd;
+	}
+
+	public String getRePwd() {
+		return rePwd;
+	}
+
+	public void setRePwd(String rePwd) {
+		this.rePwd = rePwd;
+	}
+
+	public void setBiz(BackBo biz) {
+		this.biz = biz;
+	}
+
+	public JSONArray getResult() {
+		return result;
+	}
+
+	public void setResult(JSONArray result) {
+		this.result = result;
+	}
+	
+	
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-6-21 20:34:19 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="yyg.zdxh.entitys.Goods" table="yyg_goods">
+        <id name="G_ID" type="java.lang.String">
+            <column name="G_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="G_NAME" type="java.lang.String">
+            <column name="G_NAME" />
+        </property>
+        <property name="G_TYPE_CODE" type="java.lang.String">
+            <column name="G_TYPE_CODE" />
+        </property>
+        <property name="G_INFORMATION" type="java.lang.String">
+            <column name="G_INFORMATION" />
+        </property>
+        <property name="G_PURCHASE_PRICE" type="float">
+            <column name="G_PURCHASE_PRICE" />
+        </property>
+        <property name="G_PRICE" type="float">
+            <column name="G_PRICE" />
+        </property>
+        <property name="G_CODE" type="java.lang.String">
+            <column name="G_CODE" />
+        </property>
+        <property name="G_REMARK" type="java.lang.String">
+            <column name="G_REMARK" />
+        </property>
+        <property name="G_ADD_TIME" type="java.util.Date">
+            <column name="G_ADD_TIME" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,247 @@
+.body {
+	font-family: "微软雅黑";
+	margin:0;
+    padding:0;
+}
+
+.web-panel {
+	width: 24rem;
+	border-radius: .35rem;
+	float: right;
+	margin-right: 10%;
+}
+
+a:link {
+	text-decoration: none;
+	/* 指正常的未被访问过的链接*/
+}
+
+a:visited {
+	text-decoration: none;
+	/*指已经访问过的链接*/
+}
+
+a:hover {
+	text-decoration: none;
+	/*指鼠标在链接*/
+}
+
+a:active {
+	text-decoration: none;
+	/* 指正在点的链接*/
+}
+
+.panel-header {
+	background-color: white;
+	height: 4.5rem;
+	border-top-left-radius: .35rem;
+	border-top-right-radius: .35rem;
+}
+
+.panel-header h3 {
+	color: #737373;
+	line-height: 4.5rem;
+	margin-bottom: 0;
+}
+
+.text-xs-center {
+	text-align: center!important;
+}
+
+.panel-bodystyle {
+	background: #fff;
+	overflow: hidden;
+	padding: 1.125rem 2.6875rem .625rem;
+	border: 0;
+	outline: none;
+	border-bottom-right-radius: .35rem;
+	border-bottom-left-radius: .35rem;
+}
+
+
+}
+.panel-error {
+	margin: 10px 0;
+	color: #f04d30
+}
+.usern {
+	font-size: .6875rem;
+	font-family: "微软雅黑";
+	letter-spacing: .2em;
+	color: #817aac!important;
+	border: 0;
+	outline: none;
+}
+.input-wizard {
+	border: 0;
+	outline: none;
+	color: #373a3c;
+	flex: 1;
+}
+.wizard-field {
+	margin: 10px;
+/*	border-bottom: 1px solid #DDDDDD;*/
+}
+.wizard-field .fields .text-input-wizard input[type=password],
+.wizard-field .fields .text-input-wizard input[type=text],
+.wizard-field .fields .text-input-wizard textarea {
+	color: #373a3c;
+	-ms-flex: 1;
+	flex: 1;
+	padding: 20px 0;
+	border: 0;
+	outline: none;
+}
+.fields {
+	border: 0;
+	outline: none;
+}
+.#auth .panel-body .wizard-field {
+	margin-bottom: 1rem;
+}
+.wizard-field .fields {
+	opacity: 0;
+	overflow: hidden;
+	transition: all .3s;
+	height: 0;
+}
+.wizard-field.active .fields {
+	opacity: 1;
+	height: auto;
+}
+.btn-blue {
+	color: #fff;
+	background-color: #2196F3;
+	border-color: #2196F3;
+}
+.form-text,
+.text-muted {
+	font-size: .6875rem;
+	margin-top: 1.5625rem;
+	display: block;
+}
+.astyle {
+	color: #ADADAD;
+}
+.astyle:hover {
+	color: #f60;
+}
+.web-body {
+	/*background: #808080 top center no-repeat;*/
+	background: url(../img/login.jpg) top center no-repeat;
+	width: 100%;
+	height: 555px;
+	margin-top: 10px;
+	position: relative;
+}
+.web-copyright {
+	text-align: center;
+	color: #999;
+	margin: 30px auto;
+	position: relative;
+}
+.header {
+	margin-top: 15px;
+	height: 50px;
+	border-bottom: 1px solid #e2e2e2;
+	position: relative;
+	font-family: "Microsoft Yahei";
+	background: white;
+	height: 4.5rem;
+	border-top-left-radius: .35rem;
+	border-top-right-radius: .35rem;
+}
+.header .switch {
+	height: 45px;
+	position: absolute;
+	left: 60px;
+	bottom: 0;
+	font-size: 16px;
+}
+.header .switch #switch_qlogin {
+	margin-right: 85px;
+}
+.header .switch .switch_btn {
+	color: #999;
+	display: inline-block;
+	height: 45px;
+	line-height: 45px;
+	outline: none;
+	*hide-focus: expression(this.hideFocus=true);
+}
+.header .switch .switch_btn_focus {
+	color: #333;
+	display: inline-block;
+	height: 45px;
+	line-height: 45px;
+	outline: none;
+	*hide-focus: expression(this.hideFocus=true);
+}
+.header .switch .switch_btn:hover {
+	color: #333;
+	text-decoration: none;
+}
+.header .switch .switch_btn_focus:hover {
+	text-decoration: none;
+}
+.header .switch {
+	left: 70px;
+}
+#switch_bottom {
+	position: absolute;
+	bottom: -1px;
+	bottom: -2px;
+	border-bottom: 2px solid #848484;
+}
+
+.newalert {
+  /*  margin-bottom: 20px;
+    border: 1px solid transparent;*/
+    border-radius: 4px;
+}
+
+.newalert-danger {
+    color: #a94442;
+    font-size: small;
+
+}
+
+/*@media only screen and (min-width:1200px) {
+	.panel-header{
+		min-width: 800px;
+	}
+}
+@media only screen and (min-width: 640px) and (max-width: 1199px) {
+	.panel-header{
+		min-width: 600px;
+	}
+}
+@media only screen and (min-width: 0px) and (max-width: 640px) {
+	.panel-header{
+		min-width: 300px;
+	}
+}*/
+@media only screen and (min-width: 1200px) {
+	.web-panel {
+		min-width: 350px;
+	}
+
+}
+@media only screen and (min-width: 641px) and (max-width: 1199px) {
+	.web-panel {
+		margin: 0 auto;
+		width: 60%;
+	}
+		.web-body{
+		background: rgb(255, 121, 58);
+	}
+}
+@media only screen and (min-width: 0px) and (max-width: 640px) {
+	.web-panel {
+		margin: 0 auto;
+		width: 100%;
+	}
+		.web-body{
+		background: rgb(255, 121, 58);
+	}
+}

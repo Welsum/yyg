@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-6-22 12:50:45 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="yyg.zdxh.entitys.Receive" table="RECEIVE">
+        <id name="rid" type="java.lang.String">
+            <column name="RID" />
+            <generator class="assigned" />
+        </id>
+        <property name="ruid" type="java.lang.String">
+            <column name="RUID" />
+        </property>
+        <property name="rlocationcode" type="java.lang.String">
+            <column name="RLOCATIONCODE" />
+        </property>
+        <property name="rrowaddress" type="java.lang.String">
+            <column name="RROWADDRESS" />
+        </property>
+        <property name="rpostcode" type="java.lang.String">
+            <column name="RPOSTCODE" />
+        </property>
+        <property name="raddress" type="java.lang.String">
+            <column name="RADDRESS" />
+        </property>
+        <property name="rphone" type="java.lang.String">
+            <column name="RPHONE" />
+        </property>
+        <property name="rremark" type="java.lang.String">
+            <column name="RREMARK" />
+        </property>
+        <property name="adddate" type="java.util.Date">
+            <column name="ADDDATE" />
+        </property>
+    </class>
+</hibernate-mapping>

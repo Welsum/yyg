@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-6-22 12:50:45 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="yyg.zdxh.entitys.buyRecord" table="BUYRECORD">
+        <id name="anid" type="java.lang.String">
+            <column name="ANID" />
+            <generator class="assigned" />
+        </id>
+        <property name="prid" type="java.lang.String">
+            <column name="PRID" />
+        </property>
+        <property name="pruid" type="java.lang.String">
+            <column name="PRUID" />
+        </property>
+        <property name="batch" type="java.lang.String">
+            <column name="BATCH" />
+        </property>
+        <property name="sun" type="java.lang.String">
+            <column name="SUN" />
+        </property>
+        <property name="ortotal" type="java.math.BigDecimal">
+            <column name="ORTOTAL" />
+        </property>
+        <property name="buycode" type="java.lang.Integer">
+            <column name="BUYCODE" />
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="STATUS" />
+        </property>
+        <property name="paycode" type="java.lang.String">
+            <column name="PAYCODE" />
+        </property>
+        <property name="payTime" type="java.util.Date">
+            <column name="PAYTIME" />
+        </property>
+        <property name="paytotal" type="java.math.BigDecimal">
+            <column name="PAYTOTAL" />
+        </property>
+        <property name="payway" type="java.lang.String">
+            <column name="PAYWAY" />
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="REMARK" />
+        </property>
+        <property name="addTime" type="java.util.Date">
+            <column name="ADDTIME" />
+        </property>
+    </class>
+</hibernate-mapping>

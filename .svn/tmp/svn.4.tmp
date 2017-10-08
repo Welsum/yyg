@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:cache="http://www.springframework.org/schema/cache" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+     http://www.springframework.org/schema/aop
+     http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+     http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context-4.0.xsd
+     http://www.springframework.org/schema/tx
+     http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+     http://www.springframework.org/schema/cache 
+     http://www.springframework.org/schema/cache/spring-cache-4.0.xsd">
+     
+    <!-- spring要管sessionFactory 才能保证连接使用同一个,才能控制事务 等效于HibernateUtil.getSessionFactory()-->
+    <bean id="sessionFactory"  class="org.springframework.orm.hibernate4.LocalSessionFactoryBean" 
+        p:configLocation="classpath:hibernate.cfg.xml">
+    </bean>
+    <!-- 使用环绕增强,来配置切面,不用自己写，有异常回滚... --> 
+    <!-- 配置事物属性 ，需要事物管理器-->  
+    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">  
+      <property name="sessionFactory" ref="sessionFactory"></property>  
+    </bean> 
+  
+   <tx:advice id="txAdvice" transaction-manager="transactionManager">  
+       <tx:attributes>  
+          <tx:method name="get*" read-only="true" propagation="NEVER"/> 
+          <tx:method name="find*" read-only="true" propagation="NEVER"/>
+          <tx:method name="login*" read-only="true" propagation="NEVER"/>
+          <tx:method name="add*" propagation="REQUIRED"/> 
+          <tx:method name="save*" propagation="REQUIRED"/>
+          <tx:method name="edit*" propagation="REQUIRED"/>
+          <tx:method name="update*" propagation="REQUIRED"/> 
+          <tx:method name="remove*" propagation="REQUIRED"/>
+          <tx:method name="del*" propagation="REQUIRED"/>
+          <tx:method name="delete*" propagation="REQUIRED"/>
+          <tx:method name="*" propagation="NEVER" />  
+       </tx:attributes>  
+    </tx:advice> 
+    <aop:config>  
+      <aop:advisor advice-ref="txAdvice" pointcut="execution(public * yyg.zdxh.biz.impl.*Impl.*(..))"/> 
+    </aop:config>
+
+    <!-- 日志打印 -->
+    <bean id="log" class="yyg.zdxh.aop.LoggingAop"/>
+     <aop:config>  
+      <aop:pointcut expression="execution(public * yyg.zdxh.biz.*Bo.save*(..)) or execution(public * yyg.zdxh.biz.*Bo.update*(..))" id="logpp"/>  
+      <aop:advisor advice-ref="log" pointcut-ref="logpp"/> 
+     </aop:config>
+    
+    
+     
+    <!-- IOC 反向控制或叫依赖注入-->
+    <!--数据库层-->
+    <bean id="adminDao" class="yyg.zdxh.dao.impl.AdminDaoImpl"  p:fty-ref="sessionFactory"/>
+    <bean id="basedataDao" class="yyg.zdxh.dao.impl.BasedataDaoImpl"  p:fty-ref="sessionFactory"/>
+    <bean id="pictureDao" class="yyg.zdxh.dao.impl.PictureDaoImpl"  p:fty-ref="sessionFactory"/>
+    <bean id="userDao" class="yyg.zdxh.dao.impl.UserDaoImpl"  p:fty-ref="sessionFactory"/>
+    <bean id="receiveDao" class="yyg.zdxh.dao.impl.ReceiveDaoImpl"  p:fty-ref="sessionFactory"/>
+    <bean id="salegoodsDao" class="yyg.zdxh.dao.impl.SaleGoodsImpl"  p:fty-ref="sessionFactory"/>
+    <bean id="goodsDao" class="yyg.zdxh.dao.impl.GoodsDaoImpl"  p:fty-ref="sessionFactory"/>
+    <bean id="purchaserecordDao" class="yyg.zdxh.dao.impl.PurchaseRecordDaoImpl"  p:fty-ref="sessionFactory"/>
+    
+    <!--  业务层 -->
+    <bean id="adminBiz" class="yyg.zdxh.biz.impl.AdminBoImpl" p:dao-ref="adminDao"/>
+    <bean id="basedataBiz" class="yyg.zdxh.biz.impl.BasedataBoImpl" p:dao-ref="basedataDao"/>
+    <bean id="pictureBiz" class="yyg.zdxh.biz.impl.PictureBoImpl" p:dao-ref="pictureDao"/>
+    <bean id="userBiz" class="yyg.zdxh.biz.impl.UserBoImpl" p:dao-ref="userDao"/>
+    <bean id="receiveBiz" class="yyg.zdxh.biz.impl.ReceiveBoImpl" p:dao-ref="receiveDao"/>
+    <bean id="salegoodsBiz" class="yyg.zdxh.biz.impl.SaleGoodsImpl" p:dao-ref="salegoodsDao"/>
+    <bean id="goodsBiz" class="yyg.zdxh.biz.impl.GoodsBoImpl" p:dao-ref="goodsDao"/>
+    <bean id="purchaserecordBiz" class="yyg.zdxh.biz.impl.PurchaseRecordBoImpl" p:dao-ref="purchaserecordDao"/>
+    
+    <!-- 后台的action -->
+    <bean id="loginBackAction" class="yyg.zdxh.action.back.LoginAction" p:biz-ref="adminBiz"  scope="prototype"/>
+    <bean id="adminBackAction" class="yyg.zdxh.action.back.AdminAction" p:biz-ref="adminBiz"  scope="prototype"/>
+    <bean id="basedataBackAction" class="yyg.zdxh.action.back.BasedataAction" p:biz-ref="basedataBiz"  scope="prototype"/>
+    <bean id="pictureBackAction" class="yyg.zdxh.action.back.PictureAction" p:biz-ref="pictureBiz"  scope="prototype"/>
+    <bean id="userBackAction" class="yyg.zdxh.action.back.UserAction" p:biz-ref="userBiz"  scope="prototype"/>
+    <bean id="receiveBackAction" class="yyg.zdxh.action.back.ReceiveAction" p:biz-ref="receiveBiz"  scope="prototype"/>
+    <bean id="salegoodsBackAction" class="yyg.zdxh.action.back.SaleGoodsAction" p:biz-ref="salegoodsBiz"  scope="prototype"/>
+    <bean id="goodsBackAction" class="yyg.zdxh.action.back.GoodsAction" p:biz-ref="goodsBiz"  scope="prototype"/>
+    <bean id="purchaserecordBackAction" class="yyg.zdxh.action.back.PurchaseRecordAction" p:biz-ref="purchaserecordBiz"  scope="prototype"/>
+    
+    <!-- 前台的action -->
+	<bean id="userFrontAction" class="yyg.zdxh.action.front.UserAction" p:biz-ref="userBiz"  scope="prototype"/>
+
+    
+     
+    
+    
+</beans>

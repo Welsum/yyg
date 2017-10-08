@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 28, 2017 3:00:01 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="yyg.zdxh.entitys.Basedata" table="yyg_basedata">
+        <id name="bid" type="java.lang.String">
+            <column name="B_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="code" type="java.lang.String">
+            <column name="B_CODE" />
+        </property>
+        <property name="fatherCode" type="java.lang.String">
+            <column name="B_FATHER_CODE" />
+        </property>
+        <property name="name" type="java.lang.String">
+            <column name="B_NAME" />
+        </property>
+        <property name="explain" type="java.lang.String">
+            <column name="B_EXPLAIN" />
+        </property>
+        <property name="value" type="java.lang.Integer">
+            <column name="B_VALUE" />
+        </property>
+        <property name="index" type="java.lang.Integer">
+            <column name="B_INDEX" />
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="B_REMARK" />
+        </property>
+        <property name="addTime" type="java.util.Date">
+            <column name="B_ADD_TIME" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-6-21 23:02:06 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="yyg.zdxh.entitys.SaleGoods" table="SALEGOODS">
+        <id name="sgid" type="java.lang.String">
+            <column name="SGID" />
+            <generator class="assigned" />
+        </id>
+        <property name="sggid" type="java.lang.String">
+            <column name="SGGID" />
+        </property>
+        <property name="sgprice" type="java.math.BigDecimal">
+            <column name="SGPRICE" />
+        </property>
+        <property name="sgworth" type="java.math.BigDecimal">
+            <column name="SGWORTH" />
+        </property>
+        <property name="sgpicture1" type="java.lang.String">
+            <column name="SGPICTURE1" />
+        </property>
+        <property name="sgpicture2" type="java.lang.String">
+            <column name="SGPICTURE2" />
+        </property>
+        <property name="sgpicture3" type="java.lang.String">
+            <column name="SGPICTURE3" />
+        </property>
+        <property name="sgpicture4" type="java.lang.String">
+            <column name="SGPICTURE4" />
+        </property>
+        <property name="sgpicture5" type="java.lang.String">
+            <column name="SGPICTURE5" />
+        </property>
+        <property name="sgalltimes" type="java.lang.Integer">
+            <column name="SGALLTIMES" />
+        </property>
+        <property name="sgnowtimes" type="java.lang.Integer">
+            <column name="SGNOWTIMES" />
+        </property>
+        <property name="sgbatch" type="java.lang.Integer">
+            <column name="SGBATCH" />
+        </property>
+        <property name="sgstatuesvalue" type="java.lang.Integer">
+            <column name="SGSTATUESVALUE" />
+        </property>
+        <property name="sgsoldintime" type="java.util.Date">
+            <column name="SGSOLDINTIME" />
+        </property>
+        <property name="sgsoldouttime" type="java.util.Date">
+            <column name="SGSOLDOUTTIME" />
+        </property>
+        <property name="sgvolumesold" type="java.lang.Integer">
+            <column name="SGVOLUMESOLD" />
+        </property>
+        <property name="sgindex" type="java.lang.Integer">
+            <column name="SGINDEX" />
+        </property>
+        <property name="sgaddtime" type="java.util.Date">
+            <column name="SGADDTIME" />
+        </property>
+    </class>
+</hibernate-mapping>

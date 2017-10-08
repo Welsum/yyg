@@ -1,0 +1,166 @@
+package yyg.zdxh.entitys;
+
+import java.util.Date;
+import java.sql.Timestamp;
+
+public class Order implements java.io.Serializable{
+	private String oid;
+	private String sgid;
+	private String batch;
+	private String prid;
+	private String rid;
+	private Integer announcedyn;
+	private Integer receiveyn;
+	private Integer deliveryn;
+	private Integer receiptyn;
+	private Integer assessmentyn;
+	private Integer status;
+	private Date announcedTime;
+	private String logisticsCompany;
+	private String logisticsCode;
+	private String remark;
+	private Date addTime;
+	public Order() { }
+	public String getOid() {
+		return oid;
+	}
+	public void setOid(String oid) {
+		this.oid = oid;
+	}
+	public String getSgid() {
+		return sgid;
+	}
+	public void setSgid(String sgid) {
+		this.sgid = sgid;
+	}
+	public String getBatch() {
+		return batch;
+	}
+	public void setBatch(String batch) {
+		this.batch = batch;
+	}
+	public String getPrid() {
+		return prid;
+	}
+	public void setPrid(String prid) {
+		this.prid = prid;
+	}
+	public String getRid() {
+		return rid;
+	}
+	public void setRid(String rid) {
+		this.rid = rid;
+	}
+	public Integer getAnnouncedyn() {
+		return announcedyn;
+	}
+	public void setAnnouncedyn(Integer announcedyn) {
+		this.announcedyn = announcedyn;
+	}
+	public Integer getReceiveyn() {
+		return receiveyn;
+	}
+	public void setReceiveyn(Integer receiveyn) {
+		this.receiveyn = receiveyn;
+	}
+	public Integer getDeliveryn() {
+		return deliveryn;
+	}
+	public void setDeliveryn(Integer deliveryn) {
+		this.deliveryn = deliveryn;
+	}
+	public Integer getReceiptyn() {
+		return receiptyn;
+	}
+	public void setReceiptyn(Integer receiptyn) {
+		this.receiptyn = receiptyn;
+	}
+	public Integer getAssessmentyn() {
+		return assessmentyn;
+	}
+	public void setAssessmentyn(Integer assessmentyn) {
+		this.assessmentyn = assessmentyn;
+	}
+	public Integer getStatus() {
+		return status;
+	}
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
+	public Date getAnnouncedTime() {
+		return announcedTime;
+	}
+	public void setAnnouncedTime(Date announcedTime) {
+		this.announcedTime = announcedTime;
+	}
+	public String getLogisticsCompany() {
+		return logisticsCompany;
+	}
+	public void setLogisticsCompany(String logisticsCompany) {
+		this.logisticsCompany = logisticsCompany;
+	}
+	public String getLogisticsCode() {
+		return logisticsCode;
+	}
+	public void setLogisticsCode(String logisticsCode) {
+		this.logisticsCode = logisticsCode;
+	}
+	public String getRemark() {
+		return remark;
+	}
+	public void setRemark(String remark) {
+		this.remark = remark;
+	}
+	public Date getAddTime() {
+		return addTime;
+	}
+	public void setAddTime(Date addTime) {
+		this.addTime = addTime;
+	}
+	public Order(String oid,String sgid,String batch,String prid,Integer announcedyn,String rid,Integer receiveyn,Integer deliveryn,Integer assessmentyn,Integer receiptyn,Integer status,Date announcedTime,String logisticsCompany,String logisticsCode,String remark) {
+		super();
+		this.oid = oid;
+		this.sgid = sgid;
+		this.batch = batch;
+		this.prid = prid;
+		this.rid = rid;
+		this.announcedyn = announcedyn;
+		this.receiveyn = receiveyn;
+		this.deliveryn = deliveryn;
+		this.receiptyn = receiptyn;
+		this.assessmentyn = assessmentyn;
+		this.status = status;
+		this.announcedTime = announcedTime;
+		this.logisticsCompany = logisticsCompany;
+		this.logisticsCode = logisticsCode;
+		this.remark = remark;
+		this.addTime = new Timestamp(System.currentTimeMillis());
+	}
+	
+	
+	public Order(String oid,String sgid,String batch,String prid,Integer announcedyn,String rid,Integer receiveyn,Integer deliveryn,Integer assessmentyn,Integer receiptyn,Integer status,Date announcedTime,String logisticsCompany,String logisticsCode,String remark,Date addTime) {
+		super();
+		this.oid = oid;
+		this.sgid = sgid;
+		this.batch = batch;
+		this.prid = prid;
+		this.rid = rid;
+		this.announcedyn = announcedyn;
+		this.receiveyn = receiveyn;
+		this.deliveryn = deliveryn;
+		this.receiptyn = receiptyn;
+		this.assessmentyn = assessmentyn;
+		this.status = status;
+		this.announcedTime = announcedTime;
+		this.logisticsCompany = logisticsCompany;
+		this.logisticsCode = logisticsCode;
+		this.remark = remark;
+		this.addTime = addTime;
+	}
+	
+	@Override
+	public String toString() {
+		return "Order [oid=" + oid + ",sgid=" + sgid + ",batch=" + batch + ",prid=" + prid +", rid="+ rid +", announcedyn="+ announcedyn +",receiptyn=" + receiptyn +" , deliveryn=" + deliveryn +", receiptyn=" +receiptyn+",assessmentyn=" +assessmentyn+",status="+status+",announcedTime="+announcedTime+",logisticsCompany="+logisticsCompany+",logisticsCode="+logisticsCode+",remark="+remark+",addTime="+addTime+"]";
+	}
+	
+}

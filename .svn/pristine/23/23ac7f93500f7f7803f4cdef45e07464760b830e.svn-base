@@ -1,0 +1,36 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#head {
+	background: url(../img/top-bg.gif) repeat-x top left;
+	height: 64px;
+}
+
+#head p {
+	float: right;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #CCC;
+	padding-right: 10px;
+}
+
+a {
+	color: #CCC;
+}
+
+.data-add {
+	display:none;
+}
+
+.data-edit {
+	display:none;
+}
+
+.data-read {
+	display:none;
+}
+
+.data-read-only {
+}

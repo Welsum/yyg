@@ -1,0 +1,74 @@
+.shoptittle{
+	color: #333;
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+    outline: none;
+    font-size: 30px;
+    font-family: "微软雅黑";
+}
+
+.shoprefresh{
+	color: #999999;
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+    outline: none;
+    font-size: 15px;
+    font-family: "微软雅黑";
+    /*margin-left:80% ;*/
+}
+.thsize{
+	/*font-family: "微软雅黑";*/
+	font-size: 20px;
+}
+
+.tdsize{
+	font-size: 15px;
+	font-family: "微软雅黑";
+}
+.adelete{
+	font-size: 15px;
+    margin-left: 10px;
+    color: #000000;
+}
+.input-group2{
+	display: table;
+	width: 150px;
+	border-collapse: separate;
+}
+.abtn{
+	display: inline-block;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    background: #f40;
+    text-align: center;
+    font-family: 'Lantinghei SC','Microsoft Yahei';
+    font-size: 20px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:link {
+	text-decoration: none;
+	/* 指正常的未被访问过的链接*/
+}
+
+a:visited {
+	text-decoration: none;
+	/*指已经访问过的链接*/
+}
+
+a:hover {
+	text-decoration: none;
+	/*指鼠标在链接*/
+}
+
+a:active {
+	text-decoration: none;
+	/* 指正在点的链接*/
+}

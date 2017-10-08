@@ -1,0 +1,88 @@
+package yyg.zdxh.entitys;
+
+import java.util.Date;
+
+public class Goods {
+	
+	private String G_ID;
+	private String G_NAME;
+	private String G_TYPE_CODE;
+	private String G_INFORMATION;
+	private float G_PURCHASE_PRICE;
+	private float G_PRICE;
+	private String G_CODE;
+	private String G_REMARK;
+	private Date G_ADD_TIME;
+	public String getG_ID() {
+		return G_ID;
+	}
+	public void setG_ID(String g_ID) {
+		G_ID = g_ID;
+	}
+	public String getG_NAME() {
+		return G_NAME;
+	}
+	public void setG_NAME(String g_NAME) {
+		G_NAME = g_NAME;
+	}
+	public String getG_TYPE_CODE() {
+		return G_TYPE_CODE;
+	}
+	public void setG_TYPE_CODE(String g_TYPE_CODE) {
+		G_TYPE_CODE = g_TYPE_CODE;
+	}
+	public String getG_INFORMATION() {
+		return G_INFORMATION;
+	}
+	public void setG_INFORMATION(String g_INFORMATION) {
+		G_INFORMATION = g_INFORMATION;
+	}
+	public float getG_PURCHASE_PRICE() {
+		return G_PURCHASE_PRICE;
+	}
+	public void setG_PURCHASE_PRICE(float g_PURCHASE_PRICE) {
+		G_PURCHASE_PRICE = g_PURCHASE_PRICE;
+	}
+	public float getG_PRICE() {
+		return G_PRICE;
+	}
+	public void setG_PRICE(float g_PRICE) {
+		G_PRICE = g_PRICE;
+	}
+	public String getG_CODE() {
+		return G_CODE;
+	}
+	public void setG_CODE(String g_CODE) {
+		G_CODE = g_CODE;
+	}
+	public String getG_REMARK() {
+		return G_REMARK;
+	}
+	public void setG_REMARK(String g_REMARK) {
+		G_REMARK = g_REMARK;
+	}
+	public Date getG_ADD_TIME() {
+		return G_ADD_TIME;
+	}
+	public void setG_ADD_TIME(Date g_ADD_TIME) {
+		G_ADD_TIME = g_ADD_TIME;
+	}
+	public Goods(String g_ID, String g_NAME, String g_TYPE_CODE, String g_INFORMATION, float g_PURCHASE_PRICE,
+			float g_PRICE, String g_CODE, String g_REMARK, Date g_ADD_TIME) {
+		super();
+		G_ID = g_ID;
+		G_NAME = g_NAME;
+		G_TYPE_CODE = g_TYPE_CODE;
+		G_INFORMATION = g_INFORMATION;
+		G_PURCHASE_PRICE = g_PURCHASE_PRICE;
+		G_PRICE = g_PRICE;
+		G_CODE = g_CODE;
+		G_REMARK = g_REMARK;
+		G_ADD_TIME = g_ADD_TIME;
+	}
+	public Goods() {
+		super();
+	}
+
+
+}

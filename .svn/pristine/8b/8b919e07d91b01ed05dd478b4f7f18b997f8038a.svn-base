@@ -1,0 +1,105 @@
+package yyg.zdxh.action.back;
+
+import java.sql.Timestamp;
+import java.util.List;
+
+import org.springframework.beans.BeanUtils;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+import yyg.zdxh.biz.BackBo;
+import yyg.zdxh.entitys.Receive;
+import yyg.zdxh.util.UUIDGenerator;
+
+public class ReceiveAction extends ActionSupport {
+	
+	private String id;
+	private Timestamp time;
+	private String[] checkdata;
+	private Receive receive = new Receive();
+	private List receivelist;
+	private BackBo biz = null;
+
+	public String list() {
+		receivelist = biz.getAll();
+		return this.SUCCESS;
+	}
+
+	public String addPage() {
+		return this.SUCCESS;
+	}
+
+	public String addDo() {
+		receive.setRid(UUIDGenerator.getUUID());
+		receive.setAdddate(new Timestamp(System.currentTimeMillis()));
+		biz.save(receive);
+		return this.SUCCESS;
+	}
+
+	public String updatePage() {
+		receive = (Receive) biz.getOneByOne(id, "rid");
+		return this.SUCCESS;
+	}
+
+	public String updateDo() {
+		Receive persistent = (Receive) biz.getOneByOne(id, "rid");// 加载对象
+		BeanUtils.copyProperties(receive, persistent, new String[] { "aid", "adddate" });
+		biz.update(persistent);
+		return this.SUCCESS;
+	}
+
+	public String deleteDo() {
+		biz.delete(checkdata);
+		return this.SUCCESS;
+	}
+
+	public String readPage() {
+		receive = (Receive) biz.getOneByOne(id, "rid");
+		return this.SUCCESS;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public Timestamp getTime() {
+		return time;
+	}
+
+	public void setTime(Timestamp time) {
+		this.time = time;
+	}
+
+	public String[] getCheckdata() {
+		return checkdata;
+	}
+
+	public void setCheckdata(String[] checkdata) {
+		this.checkdata = checkdata;
+	}
+
+	public Receive getAd() {
+		return receive;
+	}
+
+	public void setReceive(Receive receive) {
+		this.receive = receive;
+	}
+
+	public List getReceivelist() {
+		return receivelist;
+	}
+
+	public void setReceivelist(List receivelist) {
+		this.receivelist = receivelist;
+	}
+
+	public void setBiz(BackBo biz) {
+		this.biz = biz;
+	}
+
+}

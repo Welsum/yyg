@@ -1,0 +1,118 @@
+*{
+    padding:0;
+    margin:0;
+}
+div {
+    margin: 0 auto;
+}
+
+.help-content{
+	font-size: 14px;
+    line-height: 30px;
+    padding: 15px;
+    color: #666;
+}
+
+.textindent{
+	text-indent:2em;
+}
+
+.help-content .rule{
+	font-size: 14px;
+    line-height: 24px;
+}
+.rule-con{
+	padding: 0 20px 0 28px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 24px;
+}
+.problem-content-container{
+	font-size: 14px;
+    padding-top: 18px;
+    padding-left: 16px;
+    padding-right: 15px;
+    line-height: 30px;
+}
+.problem-text {
+    font-size: 14px;
+    padding-top: 18px;
+    padding-left: 16px;
+    padding-right: 15px;
+    line-height: 30px;
+}
+
+.GuideContent{
+	background:url(../img/Guidebg.jpg);
+}
+.clearfix {
+    display: block;
+}
+.GuideW{
+	
+    margin: 0 auto;
+}
+
+.pnew{
+	margin: 0 0 0px;
+}
+.Guidebor {
+    /*width: 977px;*/
+    border: 1px solid #DCE0D5;
+    border-top: none;
+    border-bottom: none;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+.Guide-Explain {
+    width:75%;
+    margin: 0 auto;
+}
+
+.Guide-Explain li.Explain-l {
+    position: relative;
+    color: #666;
+}
+
+.Guide-Explain li {
+    float: left;
+}
+.Guide-Separate{
+	text-align: center;
+}
+.Rule {
+    margin-left: 120px;
+    margin-top: 20px;
+}
+
+.Rule .Rule-Exp {
+    background: url(../img/Guide_12.jpg) 0 -2px no-repeat;
+    padding-left: 30px;
+    margin-left: 30px;
+    margin-top: 13px;
+}
+.Rule .Rule-Exp li {
+    height: 35px;
+    font-family: 微软雅黑,宋体;
+    font-size: 15px;
+    color: #666;
+}
+.Rule-line {
+  
+    overflow: hidden;
+    height: 1px;
+    border-top: 1px solid #EEE;
+    margin: 75px auto 50px auto;
+}
+.Rule-button {
+    text-align: center;
+}
+
+.Rule-Anglebg {
+    
+    height: 172px;
+    margin-bottom: 30px;
+/*    background: url(../img/Guide_16.png) no-repeat;*/
+
+}

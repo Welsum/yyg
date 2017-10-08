@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-6-22 12:50:45 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="yyg.zdxh.entitys.Admin" table="yyg_admin">
+        <id name="aid" type="java.lang.String">
+            <column name="A_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="loginCode" type="java.lang.String">
+            <column name="A_LOGIN_CODE" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="A_PASSWORD" />
+        </property>
+        <property name="name" type="java.lang.String">
+            <column name="A_NAME" />
+        </property>
+        <property name="description" type="java.lang.String">
+            <column name="A_DESCRIPTION" />
+        </property>
+        <property name="type" type="java.lang.Integer">
+            <column name="A_TYPE" />
+        </property>
+        <property name="terminal" type="java.lang.String">
+            <column name="A_TERMINAL" />
+        </property>
+        <property name="validity" type="java.lang.Integer">
+            <column name="A_VALIDITY" />
+        </property>
+        <property name="addTime" type="java.util.Date">
+            <column name="A_ADD_TIME" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-6-21 14:05:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="yyg.zdxh.entitys.User" table="yyg_user">
+        <id name="uid" type="java.lang.String">
+            <column name="U_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="ulogincode" type="java.lang.String">
+            <column name="U_LOGIN_CODE" />
+        </property>
+        <property name="upassword" type="java.lang.String">
+            <column name="U_PASSWORD" />
+        </property>
+        <property name="uname" type="java.lang.String">
+            <column name="U_NAME" />
+        </property>
+        <property name="uphone" type="java.lang.String">
+            <column name="U_PHONE" />
+        </property>
+        <property name="uemail" type="java.lang.String">
+            <column name="U_EMAIL" />
+        </property>
+        <property name="uremark" type="java.lang.String">
+            <column name="U_REMARK" />
+        </property>
+        <property name="uadddate" type="java.util.Date">
+            <column name="U_ADD_DATE" />
+        </property>
+    </class>
+</hibernate-mapping>

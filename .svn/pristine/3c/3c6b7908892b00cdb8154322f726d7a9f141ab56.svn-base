@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-6-25 0:14:26 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="yyg.zdxh.entitys.Assessment" table="yyg_assessment">
+        <id name="asid" type="java.lang.String">
+            <column name="AS_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="asoid" type="java.lang.String">
+            <column name="AS_O_ID" />
+        </property>
+        <property name="text" type="java.lang.String">
+            <column name="AS_TEXT" />
+        </property>
+        <property name="asTime" type="java.util.Date">
+            <column name="AS_TIME" />
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="AS_REMARK" />
+        </property>
+        <property name="addTime" type="java.util.Date">
+            <column name="AS_ADD_TIME" />
+        </property>
+    </class>
+</hibernate-mapping>

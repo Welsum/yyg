@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-6-22 12:50:45 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="yyg.zdxh.entitys.buyCode" table="BUYCODE">
+        <id name="bcid" type="java.lang.String">
+            <column name="BCID" />
+            <generator class="assigned" />
+        </id>
+        <property name="bcprid" type="java.lang.String">
+            <column name="BCPRID" />
+        </property>
+        <property name="bccode" type="java.lang.String">
+            <column name="BCCODE" />
+        </property>
+        <property name="addTime" type="java.util.Date">
+            <column name="ADDTIME" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,131 @@
+package yyg.zdxh.entitys;
+
+import java.util.Date;
+
+public class PurchaseRecord {
+	
+	private String prid;
+	private String pruid;
+	private String pranid;
+	private String prbatch;
+	private int prsum;
+	private float prordertotal;
+	private boolean prbuycode;
+	private boolean prstatus;
+	private String prpaycode;
+	private Date prpaytime;
+	private String prpaytotal;
+	private int prpayway;
+	private String prremark;
+	private Date praddtime;
+	public String getPrid() {
+		return prid;
+	}
+	public void setPrid(String prid) {
+		this.prid = prid;
+	}
+	public String getPruid() {
+		return pruid;
+	}
+	public void setPruid(String pruid) {
+		this.pruid = pruid;
+	}
+	public String getPranid() {
+		return pranid;
+	}
+	public void setPranid(String pranid) {
+		this.pranid = pranid;
+	}
+	public String getPrbatch() {
+		return prbatch;
+	}
+	public void setPrbatch(String prbatch) {
+		this.prbatch = prbatch;
+	}
+	public int getPrsum() {
+		return prsum;
+	}
+	public void setPrsum(int prsum) {
+		this.prsum = prsum;
+	}
+	public boolean isPrbuycode() {
+		return prbuycode;
+	}
+	public void setPrbuycode(boolean prbuycode) {
+		this.prbuycode = prbuycode;
+	}
+	public boolean isPrstatus() {
+		return prstatus;
+	}
+	public void setPrstatus(boolean prstatus) {
+		this.prstatus = prstatus;
+	}
+	public String getPrpaycode() {
+		return prpaycode;
+	}
+	public void setPrpaycode(String prpaycode) {
+		this.prpaycode = prpaycode;
+	}
+	public Date getPrpaytime() {
+		return prpaytime;
+	}
+	public void setPrpaytime(Date prpaytime) {
+		this.prpaytime = prpaytime;
+	}
+	public String getPrpaytotal() {
+		return prpaytotal;
+	}
+	public void setPrpaytotal(String prpaytotal) {
+		this.prpaytotal = prpaytotal;
+	}
+	public int getPrpayway() {
+		return prpayway;
+	}
+	public void setPrpayway(int prpayway) {
+		this.prpayway = prpayway;
+	}
+	public String getPrremark() {
+		return prremark;
+	}
+	public void setPrremark(String prremark) {
+		this.prremark = prremark;
+	}
+	public Date getPraddtime() {
+		return praddtime;
+	}
+	public void setPraddtime(Date praddtime) {
+		this.praddtime = praddtime;
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString();
+	}
+	public PurchaseRecord(String prid, String pruid, String pranid, String prbatch, int prsum, float prordertotal,
+			boolean prbuycode, boolean prstatus, String prpaycode, Date prpaytime, String prpaytotal, int prpayway,
+			String prremark, Date praddtime) {
+		super();
+		this.prid = prid;
+		this.pruid = pruid;
+		this.pranid = pranid;
+		this.prbatch = prbatch;
+		this.prsum = prsum;
+		this.prordertotal = prordertotal;
+		this.prbuycode = prbuycode;
+		this.prstatus = prstatus;
+		this.prpaycode = prpaycode;
+		this.prpaytime = prpaytime;
+		this.prpaytotal = prpaytotal;
+		this.prpayway = prpayway;
+		this.prremark = prremark;
+		this.praddtime = praddtime;
+	}
+	public float getPrordertotal() {
+		return prordertotal;
+	}
+	public void setPrordertotal(float prordertotal) {
+		this.prordertotal = prordertotal;
+	}
+
+
+}

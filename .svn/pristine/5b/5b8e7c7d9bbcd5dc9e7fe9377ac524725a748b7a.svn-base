@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-6-9 0:30:53 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="yyg.zdxh.entitys.Picture" table="yyg_picture">
+        <id name="pid" type="java.lang.String">
+            <column name="P_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="code" type="java.lang.String">
+            <column name="P_CODE" />
+        </property>
+        <property name="name" type="java.lang.String">
+            <column name="P_NAME" />
+        </property>
+        <property name="location" type="java.lang.String">
+            <column name="P_LOCATION" />
+        </property>
+        <property name="index" type="java.lang.String">
+            <column name="P_INDEX" />
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="P_REMARK" />
+        </property>
+        <property name="addTime" type="java.util.Date">
+            <column name="P_ADD_TIME" />
+        </property>
+    </class>
+</hibernate-mapping>

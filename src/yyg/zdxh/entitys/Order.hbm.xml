@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-6-25 0:14:26 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="yyg.zdxh.entitys.Order" table="yyg_order">
+        <id name="oid" type="java.lang.String">
+            <column name="O_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="sgid" type="java.lang.String">
+            <column name="O_SG_ID" />
+        </property>
+        <property name="batch" type="java.lang.String">
+            <column name="O_BATCH" />
+        </property>
+        <property name="prid" type="java.lang.String">
+            <column name="O_PR_ID" />
+        </property>
+        <property name="rid" type="java.lang.String">
+            <column name="O_R_ID" />
+        </property>
+        <property name="announcedyn" type="java.lang.Integer">
+            <column name="O_ANNOUNCED_YN" />
+        </property>
+        <property name="receiveyn" type="java.lang.Integer">
+            <column name="O_RECEIVE_YN" />
+        </property>
+        <property name="deliveryn" type="java.lang.Integer">
+            <column name="O_DELIVER_YN" />
+        </property>
+        <property name="receiptyn" type="java.lang.Integer">
+            <column name="O_RECEIPT_YN" />
+        </property>
+        <property name="assessmentyn" type="java.lang.Integer">
+            <column name="O_ASSESSMENT_YN" />
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="O_STATUS" />
+        </property>
+        <property name="announcedTime" type="java.util.Date">
+            <column name="O_ANNOUNCED_TIME" />
+        </property>
+        <property name="logisticsCompany" type="java.lang.String">
+            <column name="O_LOGISTICS_COMPANY" />
+        </property>
+        <property name="logisticsCode" type="java.lang.String">
+            <column name="O_LOGISTICS_CODE" />
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="O_REMARK" />
+        </property>
+        <property name="addTime" type="java.util.Date">
+            <column name="O_ADD_TIME" />
+        </property>
+    </class>
+</hibernate-mapping>

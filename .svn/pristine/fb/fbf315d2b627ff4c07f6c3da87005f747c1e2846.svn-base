@@ -1,0 +1,105 @@
+package yyg.zdxh.action.back;
+
+import java.sql.Timestamp;
+import java.util.List;
+
+import org.springframework.beans.BeanUtils;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+import yyg.zdxh.biz.BackBo;
+import yyg.zdxh.entitys.User;
+import yyg.zdxh.util.UUIDGenerator;
+
+public class UserAction extends ActionSupport{
+	
+	private String id;
+	private Timestamp time;
+	private String[] checkdata;
+	private User user = new User();
+	private List userlist;
+	private BackBo biz = null;
+
+	public String list() {
+		userlist = biz.getAll();
+		return this.SUCCESS;
+	}
+
+	public String addPage() {
+		return this.SUCCESS;
+	}
+
+	public String addDo() {
+		user.setUid(UUIDGenerator.getUUID());
+		user.setUadddate(new Timestamp(System.currentTimeMillis()));
+		biz.save(user);
+		return this.SUCCESS;
+	}
+
+	public String updatePage() {
+		user = (User) biz.getOneByOne(id, "uid");
+		return this.SUCCESS;
+	}
+
+	public String updateDo() {
+		User persistent = (User) biz.getOneByOne(id, "uid");// 加载对象
+		BeanUtils.copyProperties(user, persistent, new String[] { "uid", "uadddate" });
+		biz.update(persistent);
+		return this.SUCCESS;
+	}
+
+	public String deleteDo() {
+		biz.delete(checkdata);
+		return this.SUCCESS;
+	}
+
+	public String readPage() {
+		user = (User) biz.getOneByOne(id, "uid");
+		return this.SUCCESS;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public Timestamp getTime() {
+		return time;
+	}
+
+	public void setTime(Timestamp time) {
+		this.time = time;
+	}
+
+	public String[] getCheckdata() {
+		return checkdata;
+	}
+
+	public void setCheckdata(String[] checkdata) {
+		this.checkdata = checkdata;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public List<User> getUserlist() {
+		return userlist;
+	}
+
+	public void setUserlist(List<User> userlist) {
+		this.userlist = userlist;
+	}
+
+	public void setBiz(BackBo biz) {
+		this.biz = biz;
+	}
+
+}

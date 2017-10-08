@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-lg-offset-2" >
+					<div style="width: 100px;height: 100px;margin-top: 50px;">
+						<a href="#"><img src="img/1.png" class="img-responsive" ></a>
+					</div>
+				</div>
+				
+			    <div class="col-lg-3 col-lg-offset-3 ">
+			    	<div style="margin-top: 120px;">
+			    		已有账号?<a href="#">请登录</a>
+			    	</div>
+			    </div>
+			</div> 
+			<div class="row"  >
+				<div style="width:800px;height:500px;border:1px  solid #F0F0F0; margin: 0 auto;">
+					<div style="text-align:center;font-size: 30px;font-family: '微软雅黑';margin-top: 30px;" >新用户注册</div>
+					<div class="col-lg-6 col-lg-offset-3" style="margin-top: 40px;">
+						<div class="input-group input-group-lg">
+  							<span class="input-group-addon" id="sizing-addon1">
+  								<span class="glyphicon glyphicon-user"></span>
+  							</span>
+  							<input type="text" class="form-control" value="手机/邮箱地址" aria-describedby="sizing-addon1" onclick="dianji()" style="color: #CCCCCC;font-family: '微软雅黑';font-size: small;">
+						</div>	
+					</div>
+					<div class="col-lg-6 col-lg-offset-3" style="margin-top:50px;">
+						<div class="input-group input-group-lg">
+  							<span class="input-group-addon" id="sizing-addon1">
+  								<span class="glyphicon glyphicon-lock"></span>
+  							</span>
+  							<input type="text" class="form-control" value="设置密码" aria-describedby="sizing-addon1" style="color: #CCCCCC;font-family: '微软雅黑';font-size: small;">
+						</div>	
+					</div>
+					<div class="col-lg-6 col-lg-offset-3"  style="margin-top:50px;">
+						<div class="input-group input-group-lg">
+  							<span class="input-group-addon" id="sizing-addon1">
+  								<span class="glyphicon glyphicon-lock"></span>
+  							</span>
+  							<input type="text" class="form-control" value="确认密码" aria-describedby="sizing-addon1" style="color: #CCCCCC;font-family: '微软雅黑';font-size: small;">
+						</div>	
+					</div>
+					<div class="col-lg-5 col-lg-offset-4" style="margin-bottom: 50px;">
+						<button style="width: 250px;height:50px;margin-top: 30px;border:none;background-color: #66B3FF;color: #FFFFFF;">立  即  注  册</button>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div style="margin-left: 423px;margin-top: 20px;color: #CCCCCC">
+					<a href="#"> &nbsp;首页&nbsp;</a>
+					<s> |</s>
+					<a href="#"> &nbsp;首页 &nbsp;</a>
+					<s> |</s>
+					<a href="#"> &nbsp;首页 &nbsp;</a>
+					<s> |</s>
+					<a href="#"> &nbsp;首页 &nbsp;</a>
+					<s> |</s>
+					<a href="#"> &nbsp;首页 &nbsp;</a>
+					<s> |</s>
+					<a href="#"> &nbsp;首页 &nbsp;</a>
+					<s> |</s>
+					<a href="#"> &nbsp;首页 &nbsp;</a>
+					<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;版权归王者农药坑伟雄所有</div>
+			</div>
+		</div>
+		
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js">
+    </script>
+	</body>
+</html>
+
+
+<script >
+	function dianji()
+	{
+		alert("123465");
+	}
+</script>

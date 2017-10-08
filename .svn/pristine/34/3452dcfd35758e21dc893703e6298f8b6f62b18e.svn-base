@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-6-25 16:31:30 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="yyg.zdxh.entitys.PurchaseRecord" table="yyg_purchase_record">
+        <id name="prid" type="java.lang.String">
+            <column name="PR_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="pruid" type="java.lang.String">
+            <column name="PR_U_ID" />
+        </property>
+        <property name="pranid" type="java.lang.String">
+            <column name="PR_AN_ID" />
+        </property>
+        <property name="prbatch" type="java.lang.String">
+            <column name="PR_BATCH" />
+        </property>
+        <property name="prsum" type="int">
+            <column name="PR_SUM" />
+        </property>
+        <property name="prordertotal" type="float">
+            <column name="PR_ORDER_TOTAL" />
+        </property>
+        <property name="prbuycode" type="boolean">
+            <column name="PR_BUY_CODE" />
+        </property>
+        <property name="prstatus" type="boolean">
+            <column name="PR_STATUS" />
+        </property>
+        <property name="prpaycode" type="java.lang.String">
+            <column name="PR_PAY_CODE" />
+        </property>
+        <property name="prpaytime" type="java.util.Date">
+            <column name="PR_PAY_TIME" />
+        </property>
+        <property name="prpaytotal" type="java.lang.String">
+            <column name="PR_PAY_TOTAL" />
+        </property>
+        <property name="prpayway" type="int">
+            <column name="PR_PAY_WAY" />
+        </property>
+        <property name="prremark" type="java.lang.String">
+            <column name="PR_REMARK" />
+        </property>
+        <property name="praddtime" type="java.util.Date">
+            <column name="PR_ADD_TIME" />
+        </property>
+    </class>
+</hibernate-mapping>

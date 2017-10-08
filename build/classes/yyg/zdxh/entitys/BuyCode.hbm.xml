@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-6-25 0:14:26 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="yyg.zdxh.entitys.BuyCode" table="yyg_buy_code">
+        <id name="bcid" type="java.lang.String">
+            <column name="BC_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="bcsgid" type="java.lang.String">
+            <column name="BC_SG_ID" />
+        </property>
+        <property name="bcbatch" type="java.lang.String">
+            <column name="BC_BATCH" />
+        </property>
+        <property name="bcprid" type="java.lang.String">
+            <column name="BC_PR_ID" />
+        </property>
+        <property name="bccode" type="java.lang.String">
+            <column name="BC_CODE" />
+        </property>
+        <property name="addTime" type="java.util.Date">
+            <column name="BC_ADD_TIME" />
+        </property>
+    </class>
+</hibernate-mapping>

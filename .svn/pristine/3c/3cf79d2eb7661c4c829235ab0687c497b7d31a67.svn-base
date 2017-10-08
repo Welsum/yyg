@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+    <constant name="struts.devMode" value="true" /> 
+    <constant name="struts.ui.theme" value="simple" />
+    <constant name="struts.action.extension" value="shtml,,"/>
+    <constant name="struts.custom.i18n.resources" value="message"/>
+    <package extends="struts-default" name="loginpk" namespace="/back">
+        <action name="loginpage" class="loginBackAction" method="loginPage">
+			<result name="success" type="dispatcher"><!-- dispatcher redirect redirectAction -->
+			    /back/login.jsp
+			</result>
+	    </action>
+	    <action name="logindo" class="loginBackAction" method="loginDo">
+			<result name="success" type="redirect"><!-- dispatcher redirect redirectAction -->
+			    /back/index.jsp
+			</result>
+			<result name="input" type="dispatcher"><!-- dispatcher redirect redirectAction -->
+			   /back/login.jsp
+			</result>
+	    </action> 
+	</package>
+	
+	<!-- 异步获取数据 -->
+	<package extends="json-default,struts-default" name="jsonpk" namespace="/ajaxJson">
+        <action name="getbasedatasbyfathercode" class="basedataBackAction" method="getBasedatasByFatherCode">
+			<result name="success" type="json">
+			    <param name="root">result</param>
+			</result>
+	    </action>
+        <action name="getpicturebycode" class="pictureBackAction" method="getPictureByCode">
+			<result name="success" type="json">
+			    <param name="root">result</param>
+			</result>
+	    </action>
+	</package>
+	
+	<!-- 管理员管理 -->
+	<package extends="struts-default" name="adminpk" namespace="/back/admin">
+	    <action name="list" class="adminBackAction" method="list">
+			<result name="success" type="dispatcher"><!-- dispatcher redirect redirectAction -->
+			    /back/AdminManagement.jsp
+			</result>
+	    </action> 
+        <action name="addpage" class="adminBackAction" method="addPage">
+			<result name="success" type="dispatcher"><!-- dispatcher redirect redirectAction -->
+			    /back/AdminOne.jsp
+			</result>
+	    </action>
+	    <action name="adddo" class="adminBackAction" method="addDo">
+			<result name="success" type="redirect"><!-- dispatcher redirect redirectAction -->
+			    /back/admin/list
+			</result>
+			<!-- <result name="input" type="dispatcher">dispatcher redirect redirectAction
+			   /back/admin/adddo
+			</result> -->
+	    </action> 
+        <action name="updatepage" class="adminBackAction" method="updatePage">
+			<result name="success" type="dispatcher"><!-- dispatcher redirect redirectAction -->
+			    /back/AdminOne.jsp
+			</result>
+	    </action>
+	    <action name="updatedo" class="adminBackAction" method="updateDo">
+			<result name="success" type="redirect"><!-- dispatcher redirect redirectAction -->
+			    /back/admin/list
+			</result>
+			<!-- <result name="input" type="dispatcher">dispatcher redirect redirectAction
+			   /back/admin/adddo
+			</result> -->
+	    </action> 
+        <action name="deletedo" class="adminBackAction" method="deleteDo">
+			<result name="success" type="redirect"><!-- dispatcher redirect redirectAction -->
+			    /back/admin/list
+			</result>
+	    </action>
+	    <action name="readpage" class="adminBackAction" method="readPage">
+			<result name="success" type="dispatcher"><!-- dispatcher redirect redirectAction -->
+			    /back/AdminOne.jsp
+			</result>
+	    </action>
+	</package>
+	
+	<!-- 基础数据管理 -->
+	<package extends="struts-default" name="basedatak" namespace="/back/basedata">
+	    <action name="list" class="basedataBackAction" method="list">
+			<result name="success" type="dispatcher"><!-- dispatcher redirect redirectAction -->
+			    /back/BasedataManagement.jsp
+			</result>
+	    </action> 
+        <action name="addpage" class="basedataBackAction" method="addPage">
+			<result name="success" type="dispatcher"><!-- dispatcher redirect redirectAction -->
+			    /back/BasedataOne.jsp
+			</result>
+	    </action>
+	    <action name="adddo" class="basedataBackAction" method="addDo">
+			<result name="success" type="redirect"><!-- dispatcher redirect redirectAction -->
+			    /back/basedata/list
+			</result>
+			<!-- <result name="input" type="dispatcher">dispatcher redirect redirectAction
+			   /back/basedata/adddo
+			</result> -->
+	    </action> 
+        <action name="updatepage" class="basedataBackAction" method="updatePage">
+			<result name="success" type="dispatcher"><!-- dispatcher redirect redirectAction -->
+			    /back/BasedataOne.jsp
+			</result>
+	    </action>
+	    <action name="updatedo" class="basedataBackAction" method="updateDo">
+			<result name="success" type="redirect"><!-- dispatcher redirect redirectAction -->
+			    /back/basedata/list
+			</result>
+			<!-- <result name="input" type="dispatcher">dispatcher redirect redirectAction
+			   /back/basedata/adddo
+			</result> -->
+	    </action> 
+        <action name="deletedo" class="basedataBackAction" method="deleteDo">
+			<result name="success" type="redirect"><!-- dispatcher redirect redirectAction -->
+			    /back/basedata/list
+			</result>
+	    </action>
+	    <action name="readpage" class="basedataBackAction" method="readPage">
+			<result name="success" type="dispatcher"><!-- dispatcher redirect redirectAction -->
+			    /back/BasedataOne.jsp
+			</result>
+	    </action>
+	</package>
+	
+	<!-- 图片管理 -->
+	<package extends="struts-default" name="picturepk" namespace="/back/picture">
+	    <action name="list" class="pictureBackAction" method="list">
+			<result name="success" type="dispatcher"><!-- dispatcher redirect redirectAction -->
+			    /back/PictureManagement.jsp
+			</result>
+	    </action> 
+        <action name="addpage" class="pictureBackAction" method="addPage">
+			<result name="success" type="dispatcher"><!-- dispatcher redirect redirectAction -->
+			    /back/PictureOne.jsp
+			</result>
+	    </action>
+	    <action name="adddo" class="pictureBackAction" method="addDo">
+			<result name="success" type="redirect"><!-- dispatcher redirect redirectAction -->
+			    /back/picture/list
+			</result>
+			<result name="input" type="redirect"><!-- dispatcher redirect redirectAction -->
+			   /back/picture/addpage
+			</result>
+	    </action> 
+        <action name="updatepage" class="pictureBackAction" method="updatePage">
+			<result name="success" type="dispatcher"><!-- dispatcher redirect redirectAction -->
+			    /back/PictureOne.jsp
+			</result>
+	    </action>
+	    <action name="updatedo" class="pictureBackAction" method="updateDo">
+			<result name="success" type="redirect"><!-- dispatcher redirect redirectAction -->
+			    /back/picture/list
+			</result>
+			<!-- <result name="input" type="dispatcher">dispatcher redirect redirectAction
+			   /back/picture/adddo
+			</result> -->
+	    </action> 
+        <action name="deletedo" class="pictureBackAction" method="deleteDo">
+			<result name="success" type="redirect"><!-- dispatcher redirect redirectAction -->
+			    /back/picture/list
+			</result>
+	    </action>
+	    <action name="readpage" class="pictureBackAction" method="readPage">
+			<result name="success" type="dispatcher"><!-- dispatcher redirect redirectAction -->
+			    /back/PictureOne.jsp
+			</result>
+	    </action>
+	</package>
+</struts>

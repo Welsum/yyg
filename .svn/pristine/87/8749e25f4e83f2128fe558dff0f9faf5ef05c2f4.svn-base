@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-6-22 12:50:45 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="yyg.zdxh.entitys.Order" table="ORDER">
+        <id name="oid" type="java.lang.String">
+            <column name="OID" />
+            <generator class="assigned" />
+        </id>
+        <property name="sgid" type="java.lang.String">
+            <column name="SGID" />
+        </property>
+        <property name="batch" type="java.lang.String">
+            <column name="BATCH" />
+        </property>
+        <property name="prid" type="java.lang.String">
+            <column name="PRID" />
+        </property>
+        <property name="rid" type="java.lang.String">
+            <column name="RID" />
+        </property>
+        <property name="announcedyn" type="java.lang.Integer">
+            <column name="ANNOUNCEDYN" />
+        </property>
+        <property name="receiveyn" type="java.lang.Integer">
+            <column name="RECEIVEYN" />
+        </property>
+        <property name="deliveryn" type="java.lang.Integer">
+            <column name="DELIVERYN" />
+        </property>
+        <property name="receiptyn" type="java.lang.Integer">
+            <column name="RECEIPTYN" />
+        </property>
+        <property name="assessmentyn" type="java.lang.Integer">
+            <column name="ASSESSMENTYN" />
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="STATUS" />
+        </property>
+        <property name="announcedTime" type="java.util.Date">
+            <column name="ANNOUNCEDTIME" />
+        </property>
+        <property name="logisticsCompany" type="java.lang.String">
+            <column name="LOGISTICSCOMPANY" />
+        </property>
+        <property name="logisticsCode" type="java.lang.String">
+            <column name="LOGISTICSCODE" />
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="REMARK" />
+        </property>
+        <property name="addTime" type="java.util.Date">
+            <column name="ADDTIME" />
+        </property>
+    </class>
+</hibernate-mapping>

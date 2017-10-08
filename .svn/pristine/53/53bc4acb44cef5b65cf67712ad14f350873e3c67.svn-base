@@ -1,0 +1,72 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@page import="java.util.List"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>收货地址列表</title>
+		<%@include file="/commen/bk_m_link.jsp" %>
+	</head>
+
+	<body>
+		<%@include file="backcomment/header.jsp" %>
+		<%@include file="backcomment/lmenu.jsp" %>
+		
+		<div class="cont-right">
+			<div id="title">
+				<h1 name="title" value="图片">收货地址列表</h1>
+			</div>
+			<div id="position">当前位置：系统数据管理 >> 收货地址管理</div>
+			<div>
+				收货地址:<input />&nbsp;<a href="#" class="like_btn" onclick="checkAll('pid')">搜索 </a>
+			</div>
+			<div id="content">
+				<span style="font-weight: bold;">收货地址列表</span>
+				<form id="delcheck" name="delcheck" action="<%=request.getContextPath() %>/back/picture/deletedo" method="post">
+					<a href="<%=request.getContextPath() %>/back/picture/addpage" class="like_btn">添加 </a>
+					<a href="" class="like_btn">刷新</a>
+					<a href="#" onclick=" document.forms[0].submit()" class="like_btn">删除</a>
+					<table class="list_table">
+						<thead>
+							<tr>
+								<th width="30px"><input name="checkalldata" type="checkbox" value="checkdata"  onclick="DoCheck(this)"/></th>
+								<th width="80px">个人ID</th>
+								<th width="180px">所在地ID</th>
+								<th width="180px">街道地址</th>
+								<th width="180px">邮政编码</th>
+								<th width="180px">收货人姓名</th>
+								<th width="180px">收货人联系方式</th>
+								<th width="180px">备注</th>
+								<th width="180px">生成时间</th>
+								<th width="180px">操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<c:forEach items="${RAlist}" var="picture" varStatus="status">
+								<tr align='center'>
+									<td><input name="checkdata" type="checkbox" value="${uga_id}"/></td>
+									<td>${status.index + 1 }</td>
+									<td name="grid">${ub_id}</td>
+									<td name="szdid">${uga_locationId}</td>
+									<td name="jddz">${rowaddress}></td>
+									<td name="yzbm">${postalcode}</td>
+									<td name="shrxm">${uga_name}</td>
+									<td name="shrlxfs">${uga_phone}</td>
+									<td name="bz">${uga_remark}</td>
+									<td name="scsj">${uga_buildtime}</td>
+									<td>
+										<a href="<%=request.getContextPath() %>/back/picture/updatepage?id=${picture.pid }"> 修改 </a> |
+										<a href="<%=request.getContextPath() %>/back/picture/readpage?id=${picture.pid }"> 详情 </a>
+									</td>
+								</tr>
+							</c:forEach>
+						</tbody>
+					</table>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

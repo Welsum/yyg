@@ -1,0 +1,107 @@
+package yyg.zdxh.action.back;
+
+import java.sql.Timestamp;
+import java.util.List;
+
+import org.springframework.beans.BeanUtils;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+import yyg.zdxh.biz.BackBo;
+import yyg.zdxh.entitys.Goods;
+import yyg.zdxh.entitys.User;
+import yyg.zdxh.util.UUIDGenerator;
+
+public class GoodsAction extends ActionSupport{
+	
+	private String id;
+	private Timestamp time;
+	private String[] checkdata;
+	private Goods goods = new Goods();
+	private List goodslist;
+	private BackBo biz = null;
+
+	public String list() {
+		goodslist = biz.getAll();
+		return this.SUCCESS;
+	}
+
+	public String addPage() {
+		return this.SUCCESS;
+	}
+
+	public String addDo() {
+		goods.setG_ID(UUIDGenerator.getUUID());
+		goods.setG_ADD_TIME(new Timestamp(System.currentTimeMillis()));
+		biz.save(goods);
+		return this.SUCCESS;
+	}
+
+	public String updatePage() {
+		goods = (Goods) biz.getOneByOne(id, "G_ID");
+		return this.SUCCESS;
+	}
+
+	public String updateDo() {
+		User persistent = (User) biz.getOneByOne(id, "G_ID");// 加载对象
+		BeanUtils.copyProperties(goods, persistent, new String[] { "G_ID", "G_ADD_TIME" });
+		biz.update(persistent);
+		return this.SUCCESS;
+	}
+
+	public String deleteDo() {
+		biz.delete(checkdata);
+		return this.SUCCESS;
+	}
+
+	public String readPage() {
+		goods = (Goods) biz.getOneByOne(id, "G_ID");
+		return this.SUCCESS;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public Timestamp getTime() {
+		return time;
+	}
+
+	public void setTime(Timestamp time) {
+		this.time = time;
+	}
+
+	public String[] getCheckdata() {
+		return checkdata;
+	}
+
+	public void setCheckdata(String[] checkdata) {
+		this.checkdata = checkdata;
+	}
+
+
+	public Goods getGoods() {
+		return goods;
+	}
+
+	public void setGoods(Goods goods) {
+		this.goods = goods;
+	}
+
+	public List getGoodslist() {
+		return goodslist;
+	}
+
+	public void setGoodslist(List goodslist) {
+		this.goodslist = goodslist;
+	}
+
+	public void setBiz(BackBo biz) {
+		this.biz = biz;
+	}
+
+}

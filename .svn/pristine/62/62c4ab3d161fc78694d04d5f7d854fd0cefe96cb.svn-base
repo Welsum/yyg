@@ -1,0 +1,56 @@
+body{
+	margin:0;
+	font-size:12px;
+	font-size:#666;
+}
+
+#login_head{
+	background:url(../img/login-top-bg.gif) repeat-x top left;
+	height:42px;
+}
+#login_foot{
+	background:url(../img/login-bottom-bg.gif) repeat top left;
+	height:200px;
+	color:#ABCAD3;
+	font-size:10px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align:center;
+}
+
+#login_content{
+	background:url(../img/login_bg.jpg) repeat-x;
+	height:532px;
+}
+#login_content_left{
+	width:50%;
+	height:532px;
+	float:left;
+	background:url(../img/login-content-bg.gif) no-repeat  right center;
+	
+}
+#login_content_right{
+	width:50%;
+	height:532px;
+	float:right;
+	background:url(../img/login-wel.gif) no-repeat right bottom;
+}
+
+#login_content_left ul{
+	width:50%;
+	padding-top:78px;
+	background:url(../img/logo_bg.png) no-repeat top right;
+	list-style-type:none;
+	float:right;
+	margin-right:10%;
+	margin-top:20%;
+}
+#login_content_left ul li{
+	padding:5px;
+}
+
+#login_content_right table{
+	width:50%;
+	float:left;
+	margin-left:10%;
+	margin-top:25%;
+}

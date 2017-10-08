@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/Shoppingcart.css" />
+		<script type="text/javascript" src="js/newjs.js" ></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<title>购物车</title>
+	</head>
+
+	<body>
+		<iframe frameborder=0 scrolling=no src="Top-part.html" width="100%" height="50px"></iframe>
+		<iframe frameborder=0 scrolling=no src="Head-part.html" width="100%" height="130px"></iframe>
+		<div class="container" style="border: solid 1px silver;">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="shop" style="border-bottom: solid 1px silver;">
+						<a class="shoptittle">购物车</a>
+						<span class="glyphicon glyphicon-refresh" style="margin-left: 80%;"></span>
+						<a class="shoprefresh">刷新</a>
+					</div>
+					<table class="table">
+						<thead>
+							<tr>
+								<th class="thsize"></th>
+								<th class="thsize">商品</th>
+								<th class="thsiz"></th>
+								<th class="thsize">剩余人次</th>
+								<th class="thsize">云购人次</th>
+								<th class="thsize">小计</th>
+								<th class="thsize">操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="tdsize"><input type="checkbox" class="clchx"></td>
+								<td class="tdsize"><img src="img/20170417173235073.jpg"></td>
+								<td class="tdsize">商品信息</td>
+								<td class="tdsize">2222</td>
+								<td class="input-group2 tdsize2">
+									<span class="input-group-addon minus">-</span>
+									<input type="text" class="number form-control input-sm" value="1" />
+									<span class="input-group-addon plus">+</span>
+								</td>
+								<td class="tdsize" style="color: orangered;">1</td>
+								<td class="operation"><span class="delete btn btn-xs btn-primary">删除</span></td>
+							</tr>
+							<tr>
+								<td class="tdsize"><input type="checkbox" class="clchx"></td>
+								<td class="tdsize"><img src="img/20170417173235073.jpg"></td>
+								<td class="tdsize">商品信息</td>
+								<td class="tdsize">2222</td>
+								<td class="input-group2">
+									<span class="input-group-addon minus">-</span>
+									<input type="text" class="number form-control input-sm" value="1" />
+									<span class="input-group-addon plus">+</span>
+								</td>
+								<td class="tdsize" style="color: orangered;">1</td>
+								<td class="operation"><span class="delete btn btn-xs btn-primary">删除</span></td>
+							</tr>
+							<tr>
+								<td class="tdsize"><input type="checkbox" class="clchx"></td>
+								<td class="tdsize"><img src="img/20170417173235073.jpg"></td>
+								<td class="tdsize">商品信息</td>
+								<td class="tdsize">2222</td>
+								<td class="input-group2 tdsize2">
+									<span class="input-group-addon minus">-</span>
+									<input type="text" class="number form-control input-sm" value="1" />
+									<span class="input-group-addon plus">+</span>
+								</td>
+								<td class="tdsize" style="color: orangered;">1</td>
+								<td class="operation"><span class="delete btn btn-xs btn-primary">删除</span></td>
+							</tr>
+						</tbody>
+					</table>
+					<div>
+						<label><input class="check-all check " type="checkbox"style="margin-left: 8px;"/>&nbsp;&nbsp;全选 </label>
+						<label><a class="adelete">删除</a></label>
+						<div style="border-top: solid 1px silver;" class="pull-right total">
+							<label>金额合计:<span class="currency">￥</span><span id="priceTotal" class="large-bold-red">0.00</span></label>
+						</div>
+						<div class="pull-right" style="border-top: solid 1px silver;">
+							<label>您选择了<span id="itemCount" class="large-bold-red" style="margin:0 4px;"></span>种产品型号，共计<span id="qtyCount" class="large-bold-red" style="margin:0 4px;"></span>件</label>
+						</div>
+						<div class="pull-right selected" id="selected" style="border-top: solid 1px silver;">
+							<span id="selectedTotal"></span>
+						</div>
+					</div>
+					<div>
+						<div class="pull-right total">
+							<a class="abtn">结算</a>
+						</div>
+					</div>
+				</div>
+				<iframe frameborder=0 scrolling=no src="Foot-part.html" width="100%" height="250px"></iframe>
+	</body>
+
+</html>
